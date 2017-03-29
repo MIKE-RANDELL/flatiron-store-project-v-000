@@ -53,12 +53,12 @@ describe 'Feature Test: Store', :type => :feature do
 
         it 'has a sign in link' do
           visit store_path
-          expect(page).to have_link("sign in")
+          expect(page).to have_link("Sign In")
         end
 
         it 'has a sign up link' do
           visit store_path
-          expect(page).to have_link("Sign up")
+          expect(page).to have_link("Sign Up")
         end
 
       end
@@ -76,14 +76,14 @@ describe 'Feature Test: Store', :type => :feature do
 
         it "has a sign out link" do
           visit store_path
-          expect(page).to have_link("Sign out")
+          expect(page).to have_link("Sign Out")
         end
 
         it "lets users sign out" do
           visit store_path
-          click_link("Sign out")
+          click_link("Sign Out")
           expect(page.current_path).to eq(store_path)
-          expect(page).to have_link("sign in")
+          expect(page).to have_link("Sign In")
         end
       end
 
